@@ -20,6 +20,6 @@ class isAdmin
             return $next($request);
         }
 
-        return redirect()->route('guru.dashboard');
+        return redirect()->route('admin.dashboard');
     }
 }

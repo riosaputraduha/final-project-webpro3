@@ -12,14 +12,17 @@ class AdminMiddleware
     /**
      * Handle an incoming request.
      *
+     * @param  \Illuminate\Http\Request  $request
      * @param  \Closure(\Illuminate\Http\Request): (\Symfony\Component\HttpFoundation\Response)  $next
      */
     public function handle(Request $request, Closure $next): Response
     {
-        if (Auth::user() && Auth::user()->role == 'admin') {
+        if (Auth::check() && Auth::user()->role === 'admin') {
             return $next($request);
         }
 
-        return redirect()->route('home');
+        // Tampilkan error akses ditolak (403 Forbidden)
+        // abort(403, 'Akses ditolak. Hanya admin yang dapat mengakses halaman ini.');
+        return redirect()->route('login');
     }
 }

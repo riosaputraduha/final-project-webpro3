@@ -20,6 +20,6 @@ class isGuru
             return $next($request);
         }
 
-        return redirect()->route('admin.dashboard');
+        return redirect()->route('guru.dashboard');
     }
 }

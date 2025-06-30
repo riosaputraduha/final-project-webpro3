@@ -1,7 +1,12 @@
 @extends('layouts.admin')
 
 @section('content')
-    <h2 class="font-bold mb-3">{{ $title }}</h2>
+    <div class="d-flex align-items-center justify-content-between mb-3">
+        <h2 class="text-dark fw-bold mb-0">{{ $title }}</h2>
+        <a href="{{ route('guru.kehadiran') }}" class="btn btn-light border">
+            <i class="bx bx-arrow-back"></i> Kembali
+        </a>
+    </div>
 
     <div class="card border-0">
         <div class="card-body p-4">
