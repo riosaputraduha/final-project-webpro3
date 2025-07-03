@@ -49,20 +49,5 @@
                 </div>
             </a>
         </div>
-        <div class="col">
-            <a href="{{ route('siswa.index') }}" class="card card-dashboard">
-                <div class="card-body">
-                    <div class="d-flex gap-2">
-                        <span class="icon">
-                            <i class='bx bxs-user-badge'></i>
-                        </span>
-                        <div>
-                            <p class="fw-semibold text-secondary mb-0">Jumlah Admin</p>
-                            <h4 class="fw-bold">{{ number_format($jumlahAdmin) }} Admin</h4>
-                        </div>
-                    </div>
-                </div>
-            </a>
-        </div>
     </div>
 @endsection

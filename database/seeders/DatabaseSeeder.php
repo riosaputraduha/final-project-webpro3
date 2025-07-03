@@ -38,8 +38,8 @@ class DatabaseSeeder extends Seeder
 
         User::create([
             'name' => 'Guru',
-            'email' => 'guru@gmail.com',
-            'password' => Hash::make('password123'),
+            'email' => 'guru@absensi.com',
+            'password' => Hash::make('guru12345'),
             'role' => 'guru',
             'created_at' => now(),
             'updated_at' => now(),
@@ -47,12 +47,21 @@ class DatabaseSeeder extends Seeder
 
         WaliKelas::create([
             'user_id' => 2,
-            'nip' => '123457',
+            'nip' => '34220031',
             'nama' => 'Ayumi Susanti',
             'jenis_kelamin' => 'Perempuan',
             'tanggal_lahir' => '1995-01-01',
             'tempat_lahir' => 'Jakarta Barat',
             'alamat' => 'Jakarta Barat',
+        ]);
+        WaliKelas::create([
+            'user_id' => 2,
+            'nip' => '34210232',
+            'nama' => 'Bayu Andika Pratama',
+            'jenis_kelamin' => 'Laki-laki',
+            'tanggal_lahir' => '1992-04-23',
+            'tempat_lahir' => 'Sukabumi',
+            'alamat' => 'Jakarta Timur',
         ]);
 
         Siswa::factory(120)->create();

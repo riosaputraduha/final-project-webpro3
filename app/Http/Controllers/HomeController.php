@@ -36,7 +36,7 @@ class HomeController extends Controller
             $jumlahSiswa += Siswa::where('kelas_id', $item->id)->count();
         }
 
-        $title = 'Selamat Datang' . Auth::user()->name;
+        $title = 'Selamat Datang ' . Auth::user()->name;
         return view('pages.guru.dashboard', compact('title', 'jumlahSiswa', 'kelas'));
     }
 }

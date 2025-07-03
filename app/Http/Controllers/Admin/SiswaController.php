@@ -178,7 +178,8 @@ class SiswaController extends Controller
 
         $photo = base64_encode(file_get_contents(public_path('images/user.png')));
 
-        $qrCodeBase64 = base64_encode(QrCode::format('png')
+        // $qrCodeBase64 = base64_encode(QrCode::format('png')
+        $qrCodeBase64 = base64_encode(QrCode::format('svg')
             ->size(150)
             ->margin(1)
             ->generate($siswa->nis));

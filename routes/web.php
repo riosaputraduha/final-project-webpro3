@@ -30,6 +30,7 @@ Route::middleware(['auth', isGuru::class])
         Route::post('absensi/storeManual', [AbsensiController::class, 'storeManual'])->name('absensi.storeManual');
         Route::post('absensi/storeQr', [AbsensiController::class, 'storeQr'])->name('absensi.storeQr');
 
+        Route::get('kehadiran', [KehadiranController::class, 'index'])->name('guru.kehadiran');
         Route::get('kehadiran/{id}', [KehadiranController::class, 'show'])->name('kehadiran.show');
         Route::get('kehadiran/{id}/detail/{tanggal}', [KehadiranController::class, 'detail'])->name('kehadiran.detail');
 

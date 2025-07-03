@@ -28,9 +28,7 @@ return new class extends Migration
     public function down(): void
     {
         Schema::table('kelas', function (Blueprint $table) {
-            $table->enum('semester', ['Ganjil', 'Genap'])
-                ->after('tahun_ajaran')
-                ->default('Ganjil');
+            $table->enum('semester', ['Ganjil', 'Genap'])->default('Ganjil');
         });
         Schema::table('tahun_ajaran', function (Blueprint $table) {
             $table->dropColumn('semester');
